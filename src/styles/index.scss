@@ -15,3 +15,13 @@ body {
 #root {
     height: 100%;
 }
+a {
+    color: $dark;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+}
