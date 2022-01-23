@@ -19,6 +19,7 @@ $p-1: 5px;
 $p-2: 10px;
 $p-3: 20px;
 
+$header-height: 70px;
 
 @mixin breakpoint($point) {
     @if $point == md {

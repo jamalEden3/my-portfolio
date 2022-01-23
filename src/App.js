@@ -1,12 +1,17 @@
 import './App.style.scss';
 
-import Header from './components/header/header';
+import {Routes, Route} from 'react-router-dom';
+
+import Layout from './components/layout/layout';
+import Home from './pages/home';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/home" element={<Home />}></Route>
+      </Routes>
+    </Layout>
   );
 }
 
