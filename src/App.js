@@ -1,16 +1,12 @@
 import './App.style.scss';
 
-import {Routes, Route} from 'react-router-dom';
-
 import Layout from './components/layout/layout';
-import Home from './pages/home';
+import Banner from './components/banner/banner';
 
 function App() {
   return (
     <Layout>
-      <Routes>
-        <Route path="/home" element={<Home />}></Route>
-      </Routes>
+      <Banner />
     </Layout>
   );
 }
