@@ -53,7 +53,6 @@ function Navigation() {
                         <Link to="/" className="nav__link" onClick={menuToggle}>Testimonial</Link>
                     </li>
                 </ul>
-                    <button className="nav__btn btn">CTA Page</button>
             </nav>
             <div className="nav__toggle">
                 {!openMenu ? 

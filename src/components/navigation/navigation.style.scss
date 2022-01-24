@@ -43,6 +43,7 @@
 
         &__item {
             padding: 0.75rem 1.25rem;
+            font-size: .8rem;
         }
         &__item:not(:last-child) {
             margin-bottom: $m-2;
@@ -57,27 +58,6 @@
             color: $yellow;
             @include breakpoint(md) {
                 color: #000;
-            }
-        }
-
-        &__btn {
-            padding: 0.75rem 1.25rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            background-color: $yellow;
-            color: $dark;
-            border: 1px solid transparent;
-            transition: 0.5s ease all;
-
-            &:hover {
-                border-color: $yellow;
-                background-color: rgba($yellow, 0.1);
-                color: $yellow;
-            }
-            &:active {
-                border-color: $yellow;
-                color: $yellow;
-                background: linear-gradient(rgba($yellow, 0.1), rgba($yellow, 0.2));
             }
         }
         &__toggle {
