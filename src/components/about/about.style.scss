@@ -108,6 +108,10 @@
     padding: 1rem  2.8rem 1rem 2rem;
     border-radius: 5px;
     position: relative;
+    font-size: .8rem;
+    @include breakpoint(md) {
+        font-size: 1rem;
+    }
 }
 .btn-icon {
     font-size: 25px;

@@ -44,13 +44,13 @@ function Navigation() {
                         <Link to="/" className="nav__link" onClick={menuToggle}>About</Link>
                     </li>
                     <li className="nav__item">
-                        <Link to="/home" className="nav__link" onClick={menuToggle}>Service</Link>
+                        <Link to="/services" className="nav__link" onClick={menuToggle}>Service</Link>
                     </li>
                     <li className="nav__item">
-                        <Link to="/" className="nav__link" onClick={menuToggle}>Portfolio</Link>
+                        <Link to="/portfolio" className="nav__link" onClick={menuToggle}>Portfolio</Link>
                     </li>
                     <li className="nav__item">
-                        <Link to="/" className="nav__link" onClick={menuToggle}>Testimonial</Link>
+                        <Link to="/Testimonials" className="nav__link" onClick={menuToggle}>Testimonial</Link>
                     </li>
                 </ul>
             </nav>
