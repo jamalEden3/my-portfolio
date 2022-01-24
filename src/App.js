@@ -1,12 +1,12 @@
 import './App.style.scss';
 
 import Layout from './components/layout/layout';
-import Banner from './components/banner/banner';
+import About from './components/about/about';
 
 function App() {
   return (
     <Layout>
-      <Banner />
+      <About />
     </Layout>
   );
 }
