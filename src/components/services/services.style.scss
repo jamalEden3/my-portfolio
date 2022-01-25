@@ -1,4 +1,74 @@
+@import '../../styles/variables.scss';
 .services {
+    border: 1px solid #000;
     height: 100vh;
-    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $yellow;
+    padding: 40px;
+
+    &__l {
+        border: 1px solid #000;
+        flex: 1;
+        padding: 30px 45px;
+        position: relative;
+    }
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: calc(100vh - 200px);
+    }
+    &__title {
+        border: 2px solid #456;
+        font-size: 80px;
+        position: relative;
+    }
+    &__name {
+        border: 3px dotted #258;
+        position: absolute;
+        top: -30px;
+        left: -20px;
+        transform: rotate(-30deg);
+        color: darkblue;
+        font-size: 16px;
+    }
+    &__subTitle {
+        border: 3px dashed rgb(0, 119, 36);
+        margin: 30px 0;
+        color: #777;
+        width: 80%;
+        position: relative;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #777;
+            position: absolute;
+            left: -30px;
+            top: 9px;
+            }
+    }
+    &__btn {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        margin: 0 auto;
+        
+    }
+    &__btn-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        padding: 10px;
+    }
+    &__r {
+        border: 1px solid #000;
+        flex: 1;
+        padding: 30px 45px;
+    }
+    
 }

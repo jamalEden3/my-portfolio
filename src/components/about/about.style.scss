@@ -71,6 +71,9 @@
         padding-left: 30px;
         color: #777;
         margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &::before {
             content: '';
             width: 20px;
