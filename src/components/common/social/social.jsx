@@ -8,9 +8,11 @@ function Social() {
     <div className="social">
         <p className="social__title">Check Out My</p>
         {
-            socialData.map(({icon, name, id}) => (
+            socialData.map(({icon, name, id, url}) => (
                 <div className="social__icons" key={id}>
-                    <img src={icon} alt={name} className="social__icon" />
+                    <a href={url} className="social__url">
+                        <img src={icon} alt={name} className="social__icon" />
+                    </a>
                 </div>
             ))
         }
