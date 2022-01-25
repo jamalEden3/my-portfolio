@@ -1,0 +1,19 @@
+.social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: absolute;
+    bottom: 20px;
+
+    &__title {
+        margin-right: 30px;
+        font-size: 20px;
+    }
+    &__icons:not(:last-child) {
+        margin-right: 30px;
+    }
+    &__icon {
+        width: 45px;
+        display: block;
+    }
+}

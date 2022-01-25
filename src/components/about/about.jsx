@@ -4,7 +4,7 @@ import './about.style.scss';
 import { AiOutlineAliwangwang } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-
+import Social from '../common/social/social';
 
 import myImg from '../../assets/me.png' 
 
@@ -27,7 +27,11 @@ function About() {
                 </div>
             </div>
             <div className="about__social">
-
+                <Social />
+            </div>
+            <div className="about__scroll">
+                <div className="about__vl"></div>
+                <p>Scroll down</p>
             </div>
         </section>
     )

@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 .about {
     padding: 2rem .8rem;
+    position: relative;
     @include breakpoint(md) {
         padding: 0 4rem;
     }
@@ -85,7 +86,7 @@
         justify-content: space-around;
     }
     &__btn-talk {
-        background-color: #312dff;
+        background-color: #4a22ff;
         color: #fff;
     }
     &__talk-icon {
@@ -97,6 +98,24 @@
     }
     &__pfl-icon {
         color: $dark;
+    }
+    &__scroll {
+        position: absolute;
+        right: 30px;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            color: rgb(119, 119, 119);
+            font-size: 14px;
+        }
+    }
+    &__vl {
+        height: 500px;
+        border-left: 2px solid rgb(199, 197, 197);
+        margin-bottom: 10px;
     }
 }
 .btn {
