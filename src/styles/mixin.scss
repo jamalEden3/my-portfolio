@@ -1,0 +1,69 @@
+@mixin infoBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    @include breakpoint(md) {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+    }
+}
+
+@mixin bioBlock {
+    margin: 15px 0;
+        width: 70%;
+        position: relative;
+        padding-left: 30px;
+        color: #777;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .5rem;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            }
+}
+@mixin mainBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $yellow;
+    padding: 40px;
+    height: 100vh;
+}
+@mixin leftBlock {
+    flex: 1;
+    padding: 30px 45px;
+    position: relative;
+}
+
+@mixin rightBlock {
+    flex: 1;
+    padding: 30px 45px;
+}
+
+@mixin titleBlock {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+@mixin label {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    transform: rotate(-30deg);
+    color: darkblue;  
+}

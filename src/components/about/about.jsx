@@ -13,7 +13,7 @@ function About() {
         <section className="about">
             <div className="about__infos">
                 <div className="about__info">
-                    <span className="about__hello">Hello!</span>
+                    <span className="about__label">Hello!</span>
                     <h1 className="about__title">I have passionate <br />about Front-End development</h1>
                     <p className="about__bio">Hi! I'm FrontEnd developer - Creating bold & brave interfaces design for 
                     companies all across the world.</p>

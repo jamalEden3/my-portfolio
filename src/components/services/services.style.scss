@@ -1,85 +1,80 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
 .services {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $yellow;
-    padding: 40px;
-    height: 100vh;
+    @include mainBlock;
 
     &__l {
-        flex: 1;
-        padding: 30px 45px;
-        position: relative;
+       @include leftBlock
     }
     &__infos {
-        border: 1px dashed #000;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        position: relative;
-        text-align: center;
-        margin: 20px 0;
-        @include breakpoint(md) {
-            text-align: left;
-            justify-content: flex-start;
-            align-items: flex-start;
-            margin: 0;
-        }
+        @include infoBlock;
     }
     &__title {
-        font-size: 2.5rem;
-        font-weight: 600;
+       @include titleBlock;
     }
-    &__name {
-        position: absolute;
-        top: -30px;
-        left: -20px;
-        transform: rotate(-30deg);
-        color: darkblue;
+    &__label {
+       @include label;
     }
     &__subTitle {
-        border: 1px solid #000;
-        margin: 15px 0;
-        width: 70%;
-        position: relative;
-        padding-left: 30px;
-        color: #777;
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: .5rem;
-        &::before {
-            content: '';
-            width: 20px;
-            height: 2px;
-            background-color: #000;
-            position: absolute;
-            left: 0;
-            top: 5px;
-            }
+        @include bioBlock;
     }
     &__btn {
         width: 100px;
         height: 100px;
         border: 1px solid #000;
-        /* border-radius: 50%;
-        border: 1px solid #000;
-        margin: 0 auto; */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 40px;
     }
     &__btn-icon {
-        /* width: 50px;
-        height: 50px;
+        border: 1px solid #000;
         border-radius: 50%;
-        border: 1px solid #000; */
+        padding: 1rem;
+        font-size: 4rem;
     }
     &__r {
-        border: 1px solid #000;
-        flex: 1;
-        padding: 30px 45px;
+        @include rightBlock;
+    }
+
+    &__service {
+        border-top: 2px solid #000;
+        padding-top: 5px;
+        position: relative;
+        padding: 15px 10px;
+    }
+
+    &__service:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    &__details {
+        display: flex;
     }
     
+    &__service-num {
+        margin-right: 15px;
+    }
+
+    &__service-link {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        width: 2rem;
+        height: 2rem;
+        background-color: rgb(23, 58, 255);
+        color: $light-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    &__service-name {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
 }

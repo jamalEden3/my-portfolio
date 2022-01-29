@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+.skills {
+    @include mainBlock;
+    background-color: #fff;
+
+    &__l {
+        @include leftBlock;
+        border: 1px solid #000;
+    }
+
+    &__info {
+        @include infoBlock;
+    }
+
+    &__title {
+        @include titleBlock;
+    }
+
+    &__label {
+        @include label
+    }
+
+    &__subTitle {
+        @include bioBlock;
+    }
+
+    &__skills {
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column
+    }
+    &__skills-title {
+
+    }
+    &__group {
+        border: 3px solid #858;
+    }
+
+    &__image {
+        width: 70px;
+        height: 70px
+    }
+
+
+    &__r {
+        @include rightBlock;
+        border: 1px solid rgb(184, 7, 7);
+    }
+}
