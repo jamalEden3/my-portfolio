@@ -14,20 +14,20 @@ function Skills() {
                     <p className="skills__subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. \
                     Labore porro architecto reiciendis, deleniti maxime minima ipsa magni voluptate.</p>
                 </div>
-                <div className="skills__skills">
-                    <h4 className="skills__skills-title">Skills</h4>
-                    {
-                       SKILLS_DATA.map(({id, name, icon}) => {
-                           return(
-                               <div className="skills__group">
-                                   <div className="skills__skills">
-                                       <img className="skills__image" src={icon} />
-                                       <h4 className="skills__">{name}</h4>
+                <div className="skills__box">
+                    <h4 className="skills__group-title">Skills</h4>
+                    <div className="skills__group">
+                        {
+                           SKILLS_DATA.map(({id, name, icon}) => {
+                               return(
+                                    <div className="skills__skill">
+                                        <img className="skills__image" src={icon} />
+                                        <h4 className="skills__">{name}</h4>
                                    </div>
-                               </div>
-                           )
-                       }) 
-                    }
+                               )
+                           }) 
+                        }
+                    </div>
                 </div>
             </div>
         </div>

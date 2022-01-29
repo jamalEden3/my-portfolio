@@ -35,11 +35,12 @@
     }
     &__group {
         border: 3px solid #858;
+        display: flex;
     }
 
     &__image {
-        width: 70px;
-        height: 70px
+        width: 50px;
+        height: 50px
     }
 
 

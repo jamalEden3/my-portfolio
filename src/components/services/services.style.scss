@@ -7,18 +7,23 @@
     &__l {
        @include leftBlock
     }
+
     &__infos {
         @include infoBlock;
     }
+
     &__title {
        @include titleBlock;
     }
+
     &__label {
        @include label;
     }
+
     &__subTitle {
         @include bioBlock;
     }
+
     &__btn {
         width: 100px;
         height: 100px;
@@ -30,12 +35,14 @@
         cursor: pointer;
         margin-top: 40px;
     }
+
     &__btn-icon {
         border: 1px solid #000;
         border-radius: 50%;
         padding: 1rem;
         font-size: 4rem;
     }
+    
     &__r {
         @include rightBlock;
     }
