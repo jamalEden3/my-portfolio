@@ -15,8 +15,8 @@ function About() {
                 <div className="about__info">
                     <span className="about__hello">Hello!</span>
                     <h1 className="about__title">I have passionate <br />about Front-End development</h1>
-                    <h6 className="about__bio">Hi! I'm FrontEnd developer - Creating bold & brave interfaces design for 
-                    companies all across the world.</h6>
+                    <p className="about__bio">Hi! I'm FrontEnd developer - Creating bold & brave interfaces design for 
+                    companies all across the world.</p>
                     <div className="about__btns">
                         <button className="btn about__btn-talk">Let's Talk <AiOutlineAliwangwang className="btn-icon about__talk-icon"/></button>
                         <button className="btn about__btn-pfl">Portflio<AiOutlineArrowRight className="btn-icon about__pfl-icon"/></button>

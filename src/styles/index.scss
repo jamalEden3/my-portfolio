@@ -6,10 +6,23 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: $Poppins;
     width: 100%;
     color: $dark;
+    font-size: 15px;
+
+    @media screen and (min-width : $screen-sm) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width : $screen-md) {
+        font-size: 18px;
+    }
+
+    @media screen and (min-width : $screen-lg) {
+        font-size: 20px;
+    }
 }
 
 #root {

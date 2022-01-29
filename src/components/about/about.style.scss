@@ -1,6 +1,5 @@
 @import '../../styles/variables.scss';
 .about {
-    padding: 2rem .8rem;
     position: relative;
     height: calc(100vh - #{$header-height});
     @include breakpoint(md) {
@@ -58,11 +57,11 @@
         color: darkblue;
     }
     &__title {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 600;
-        @include breakpoint(md) {
-            font-size: 40px;
-        }
+        /* @include breakpoint(md) {
+            font-size: 3rem;
+        } */
     }
     &__bio {
         margin: 15px 0;
@@ -74,6 +73,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: .5rem;
         &::before {
             content: '';
             width: 20px;
@@ -86,8 +86,8 @@
     }
     &__btns {
         display: flex;
-        width: 50%;
-        justify-content: space-around;
+        width:60%;
+        justify-content: space-between;
     }
     &__btn-talk {
         background-color: #4a22ff;
@@ -105,35 +105,38 @@
     }
     &__scroll {
         position: absolute;
-        right: 30px;
-        top: 100px;
+        height: 70%;
+        right: 2%;
+        top: 10%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         p{
-            color: rgb(119, 119, 119);
-            font-size: 14px;
+            color: rgb(167, 167, 167);
+            font-size: 10px;
         }
     }
     &__vl {
-        height: 500px;
-        border-left: 2px solid rgb(199, 197, 197);
+        height: 100%;
+        border-left: 1px solid rgb(199, 197, 197);
         margin-bottom: 10px;
     }
 }
 .btn {
-    padding: 1.2rem  2.8rem 1.2rem 2rem;
+    padding: .5rem  1.5rem;
     border-radius: 5px;
     position: relative;
-    font-size: .8rem;
+    font-size: .5rem;
+    margin-right: 15px;
+    text-align: center;
     @include breakpoint(md) {
-        font-size: 1rem;
+        font-size: .7rem;
     }
 }
 .btn-icon {
-    font-size: 25px;
+    font-size: .7rem;
     position: absolute;
-    right: 10px;
-    top: 20px;
+    right: 6px;
+    top: 15px;
 }
