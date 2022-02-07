@@ -4,6 +4,7 @@
 .about {
     position: relative;
     height: calc(100vh - #{$header-height});
+    scroll-snap-align: start;
     @include breakpoint(md) {
         padding: 0 4rem;
     }

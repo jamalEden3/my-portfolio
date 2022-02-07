@@ -1,42 +1,59 @@
 @import "./variables.scss";
+@import "./base.scss";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+h1 {
+    font-size: 2.5rem;
 }
 
-html, body {
-    font-family: $Poppins;
-    width: 100%;
-    color: $dark;
-    font-size: 15px;
+h2 {
+    font-size: 2rem;
+}
 
-    @media screen and (min-width : $screen-sm) {
-        font-size: 16px;
+p {
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width : 768px) {
+    h1 {
+        font-size: 3rem;
     }
-
-    @media screen and (min-width : $screen-md) {
-        font-size: 18px;
+    
+    h2 {
+        font-size: 2.5rem;
     }
-
-    @media screen and (min-width : $screen-lg) {
-        font-size: 20px;
+    
+    p {
+        font-size: 1.7rem;
     }
 }
 
-#root {
-    height: 100%;
-}
-a {
-    color: $dark;
-    text-decoration: none;
+@media screen and (min-width : 1024px) {
+    h1 {
+        font-size: 5rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    p {
+        font-size: 2rem;
+    }
 }
 
-button {
-    cursor: pointer;
-    outline: none;
-    font-family: inherit;
-    background-color: transparent;
-    border: none;
+@media screen and (min-width : 1200px) {
+    h1 {
+        font-size: 6.4rem;
+    }
+    
+    h2 {
+        font-size: 4rem;
+    }
+    
+    p {
+        font-size: 2.4rem;
+    }
 }
+
+
