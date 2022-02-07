@@ -5,11 +5,13 @@ import About from './components/about/about';
 import Services from './components/services/services';
 import Skills from './components/skills/skills';
 
+import Header from './components/header/header';
+
 function App() {
   return (
-    <h1>
-      App
-    </h1>
+    <>
+      <Header />
+    </>
   );
 }
 

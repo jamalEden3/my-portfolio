@@ -12,7 +12,12 @@ function Navigation() {
         width: undefined,
         height: undefined
     });
-
+    
+    useEffect(() => {
+        if (size.width > 768 && !openMenu) {
+            setOpenMenu(false);
+        }
+    },[size.width, openMenu]);
     useEffect(() => {
         const handleResize = ()=> {
             setSize({
@@ -27,30 +32,27 @@ function Navigation() {
     }, 
     []);
 
-    useEffect(() => {
-        if (size.width > 768 && openMenu) {
-            setOpenMenu(false);
-        }
-    },[size.width, openMenu]);
 
     const menuToggle = () => {
         setOpenMenu((prev) => !prev)
     };
+
+    console.log(window.innerWidth)
     return (
         <>
             <nav className={`nav ${openMenu && size.width < 768 ? 'nav__isMenu': ''}`}>
                 <ul className="nav__list">
-                    <li className="nav__item">
-                        <Link to="/" className="nav__link" onClick={menuToggle}>About</Link>
+                    <li className="nav__list__item">
+                        <Link to="/" className="nav__list__link" onClick={menuToggle}>About</Link>
                     </li>
-                    <li className="nav__item">
-                        <Link to="/services" className="nav__link" onClick={menuToggle}>Service</Link>
+                    <li className="nav__list__item">
+                        <Link to="/services" className="nav__list__link" onClick={menuToggle}>Service</Link>
                     </li>
-                    <li className="nav__item">
-                        <Link to="/portfolio" className="nav__link" onClick={menuToggle}>Portfolio</Link>
+                    <li className="nav__list__item">
+                        <Link to="/portfolio" className="nav__list__link" onClick={menuToggle}>Portfolio</Link>
                     </li>
-                    <li className="nav__item">
-                        <Link to="/Testimonials" className="nav__link" onClick={menuToggle}>Testimonial</Link>
+                    <li className="nav__list__item">
+                        <Link to="/Testimonials" className="nav__list__link" onClick={menuToggle}>Testimonial</Link>
                     </li>
                 </ul>
             </nav>

@@ -9,13 +9,13 @@ function Header() {
     
     return (
         <header className="header">
-            <div className="header__content">
-                <Link to="/" className="header__logo">
+            <div className="header__logo">
+                <Link to="/" className="header__logo__link">
                     Jamal
-                    <DiYii className="header__logo-icon" />
+                    <DiYii className="header__logo__icon" />
                 </Link>
-               <Navigation />
             </div>
+            <Navigation />
         </header>
     )
 }

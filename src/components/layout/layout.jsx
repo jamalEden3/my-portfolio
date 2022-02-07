@@ -5,12 +5,9 @@ import Header from '../header/header';
 
 function Layout({children}) {
     return (
-        <>
-            <Header />
-            <div className="container">
-                {children}
-            </div>
-        </>
+        <div className="layout">
+            {children}
+        </div>
     )
 }
 

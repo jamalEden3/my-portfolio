@@ -1,29 +1,33 @@
 @import "../../styles/variables.scss";
 
 .header {
+    border: 1px solid #000;
     width: 100%;
     height: $header-height;
-    padding: 0 1.5rem;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
     transition: ease-in-out .5s;
+    padding: $p-1 $p-2;
     @include breakpoint(md) {
-        padding: 0 3rem;
+        /* padding: 0 3rem; */
     }
-    &__content {
-        overflow: hidden;
+    &__logo {
+        border: 2px solid #505;
         height: 100%;
-        max-width: 1920px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: relative;
-        z-index: 100;
-    }
-    &__logo {
         cursor: pointer;
-        font-size: 1.2rem;
-        font-weight: bold;
-        &-icon {
-            color: $yellow
+
+        &__link {
+            
         }
+        &__icon {
+            color: $yellow
+        } 
     }
 }
