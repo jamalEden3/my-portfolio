@@ -2,18 +2,21 @@
 @import '../../styles/mixin.scss';
 
 .about {
+    border: 2px dashed rgb(255, 24, 255);
     position: relative;
     height: calc(100vh - #{$header-height});
-    scroll-snap-align: start;
     @include breakpoint(md) {
         padding: 0 4rem;
     }
 
     &__infos {
+        border: 2px solid #ff0000;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: $p-1;
         @include breakpoint(md) {
             flex-direction: row;
             align-items: center;
@@ -22,23 +25,12 @@
     }
 
     &__info {
-        @include infoBlock;
-    }
-
-    &__image-box {
+        border: 2px solid #700000;
+        display: flex;
+        flex-direction: column;
+        position: relative;
         text-align: center;
-        @include breakpoint(md) {
-            flex: 1;
-        }
-        
     }
-    &__image {
-        width: 50%;
-        @include breakpoint(md) {
-            width: 90%;
-        }
-    }
-
     &__label {
         position: absolute;
         top: -30px;
@@ -47,31 +39,74 @@
         color: darkblue;
     }
     &__title {
-        font-size: 2rem;
         font-weight: 600;
+        margin-bottom:  $m-2;
+        position: relative;
+
+        &::before {
+            content: 'Hello';
+            left: 10%;
+            top: -10%;
+            color: red;
+            transform: rotate(-30deg);
+            position: absolute;
+            font-size: 1.5rem;
+        }
     }
+
     &__bio {
-        @include bioBlock;
+        position: relative;
+        color: #333;
+        margin-bottom:  $m-2;
     }
+    &__image-box {
+        text-align: center;
+        @include breakpoint(md) {
+            flex: 1;
+        }
+        
+    }
+    &__image {
+        width: 100%;
+        @include breakpoint(md) {
+            width: 90%;
+        }
+    }
+
     &__btns {
         display: flex;
-        width:60%;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+            width: 150px;
+            border-radius: 5px;
+            position: relative;
+            margin-right: 15px;
+            text-align: center;
+            padding: $p-2 0;
+            font-size: 1.7rem;
+            font-weight: 400;
     }
     &__btn-talk {
-        background-color: #4a22ff;
+        background-color: $blue;
         color: #fff;
     }
+
     &__talk-icon {
         color: $yellow;
     }
+
     &__btn-pfl{
         background-color: $yellow;
-        color: #312dff;
+        color: $dark;
     }
+
     &__pfl-icon {
         color: $dark;
     }
+    
     &__scroll {
         position: absolute;
         height: 70%;
@@ -92,18 +127,9 @@
         margin-bottom: 10px;
     }
 }
-.btn {
-    width: 150px;
-    padding: .5rem  1.5rem;
-    border-radius: 5px;
-    position: relative;
-    font-size: .5rem;
-    margin-right: 15px;
-    text-align: center;
-    @include breakpoint(md) {
-        font-size: .7rem;
-    }
-}
+
+
+
 .btn-icon {
     font-size: .7rem;
     position: absolute;

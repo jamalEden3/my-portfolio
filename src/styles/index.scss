@@ -11,7 +11,15 @@ h2 {
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+}
+
+a {
+    font-size: 1.5rem;
+}
+
+button {
+    font-size: 1.5rem;
 }
 
 @media screen and (min-width : 768px) {
@@ -26,6 +34,15 @@ p {
     p {
         font-size: 1.7rem;
     }
+    a {
+        font-size: 1.7rem;
+    }
+    button {
+        font-size: 1.7rem;
+    }
+    .container {
+        width: 80%;
+    }
 }
 
 @media screen and (min-width : 1024px) {
@@ -38,6 +55,9 @@ p {
     }
     
     p {
+        font-size: 2rem;
+    }
+    button {
         font-size: 2rem;
     }
 }
@@ -54,6 +74,14 @@ p {
     p {
         font-size: 2.4rem;
     }
+
+    .container {
+        width: 80%;
+    }
+    button {
+        font-size: 2rem;
+    }
+
 }
 
 
