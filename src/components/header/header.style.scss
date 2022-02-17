@@ -1,7 +1,6 @@
 @import "../../styles/variables.scss";
 
 .header {
-    border: 1px solid #000;
     width: 100%;
     height: $header-height;
     position: relative;
@@ -16,16 +15,11 @@
         /* padding: 0 3rem; */
     }
     &__logo {
-        border: 2px solid #505;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
-
-        &__link {
-            
-        }
         &__icon {
             color: $yellow
         } 

@@ -2,26 +2,43 @@
 @import '../../styles/mixin.scss';
 
 .services {
-    @include mainBlock;
+    background-color: $yellow;
+    @include mainSection;
 
-    &__l {
-       @include leftBlock
+    &__group {
+        @include mainBlock;
+        flex-direction: column-reverse;
     }
 
+    &__l {
+        @include leftSectionPart;
+        padding: 0;
+    }
+
+
     &__infos {
-        @include infoBlock;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        position: relative;
+        text-align: center;
+        margin: 20px 0;
+        @include breakpoint(md) {
+            text-align: left;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 0;
+        }
     }
 
     &__title {
-       @include titleBlock;
-    }
-
-    &__label {
-       @include label;
+        @include sectionTitle;
     }
 
     &__subTitle {
-        @include bioBlock;
+        @include subTitle;
     }
 
     &__btn {
@@ -44,22 +61,29 @@
     }
     
     &__r {
-        @include rightBlock;
+        display: flex;
+        flex-direction: column; 
+        padding: $p-4;
+        margin-bottom: $m-4;
     }
 
     &__service {
         border-top: 2px solid #000;
-        padding-top: 5px;
         position: relative;
-        padding: 15px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: $p-3;
     }
 
     &__service:not(:last-of-type) {
-        margin-bottom: 30px;
+        margin-bottom: $m-4;
     }
 
     &__details {
+        flex: 2;
         display: flex;
+        align-items: center;
     }
     
     &__service-num {
@@ -67,11 +91,9 @@
     }
 
     &__service-link {
-        position: absolute;
-        bottom: -10px;
-        right: 0;
-        width: 2rem;
-        height: 2rem;
+        width: 30px;
+        height: 30px;
+        font-size: 2rem;
         background-color: rgb(23, 58, 255);
         color: $light-green;
         display: flex;
@@ -81,7 +103,7 @@
     }
 
     &__service-name {
-        font-size: 1.4rem;
         font-weight: 600;
+        width: 65%;
     }
 }

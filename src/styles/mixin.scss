@@ -1,21 +1,47 @@
-@mixin infoBlock {
+@mixin mainSection {
+    position: relative;
+}
+@mixin mainBlock {
+    height: calc(100vh - #{$header-height});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: $p-1;
+}
+@mixin leftSectionPart {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
     position: relative;
     text-align: center;
-    margin: 20px 0;
-    @include breakpoint(md) {
-        text-align: left;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 0;
+    padding: $p-4 0;
+}
+
+/* @mixin rightSectionPart {
+   
+} */
+
+@mixin sectionTitle{
+    font-weight: 600;
+    margin-bottom:  $m-2;
+    position: relative;
+    &::before {
+        content: 'Hello';
+        left: 20%;
+        top: -15%;
+        color: red;
+        transform: rotate(-30deg);
+        position: absolute;
+        font-size: 1.5rem;
     }
 }
 
-@mixin bioBlock {
+@mixin subTitle {
+    position: relative;
+    color: #333;
+    margin-bottom:  $m-2;
+}
+/* @mixin bioBlock {
     margin: 15px 0;
         width: 70%;
         position: relative;
@@ -67,3 +93,4 @@
     transform: rotate(-30deg);
     color: darkblue;  
 }
+ */

@@ -2,21 +2,11 @@
 @import '../../styles/mixin.scss';
 
 .about {
-    border: 2px dashed rgb(255, 24, 255);
-    position: relative;
-    height: calc(100vh - #{$header-height});
-    @include breakpoint(md) {
-        padding: 0 4rem;
-    }
+    @include mainSection;
+
 
     &__infos {
-        border: 2px solid #ff0000;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: $p-1;
+        @include mainBlock;
         @include breakpoint(md) {
             flex-direction: row;
             align-items: center;
@@ -25,11 +15,7 @@
     }
 
     &__info {
-        border: 2px solid #700000;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        text-align: center;
+        @include leftSectionPart
     }
     &__label {
         position: absolute;
@@ -39,25 +25,11 @@
         color: darkblue;
     }
     &__title {
-        font-weight: 600;
-        margin-bottom:  $m-2;
-        position: relative;
-
-        &::before {
-            content: 'Hello';
-            left: 10%;
-            top: -10%;
-            color: red;
-            transform: rotate(-30deg);
-            position: absolute;
-            font-size: 1.5rem;
-        }
+        @include sectionTitle;
     }
 
-    &__bio {
-        position: relative;
-        color: #333;
-        margin-bottom:  $m-2;
+    &__subtitle {
+        @include subTitle;
     }
     &__image-box {
         text-align: center;
