@@ -41,6 +41,23 @@
     color: #333;
     margin-bottom:  $m-2;
 }
+
+@mixin leftInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    @include breakpoint(md) {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+    }
+}
 /* @mixin bioBlock {
     margin: 15px 0;
         width: 70%;

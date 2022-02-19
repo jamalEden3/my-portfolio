@@ -1,48 +1,60 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixin.scss';
 .skills {
-    /* @include mainBlock; */
+    @include mainSection;
+    padding-top: $p-4;
     background-color: #fff;
 
-    &__l {
-        /* @include leftBlock; */
+    &__group {
+        @include mainBlock;
+        align-items: initial;
+        padding: 0 $m-2;
     }
 
+    &__l {
+        @include leftSectionPart;
+        padding: 0;
+    }
+
+    &__infos {
+        @include leftInfos;
+    }
     &__info {
       /*   @include infoBlock; */
     }
 
     &__title {
-        /* @include titleBlock; */
-    }
-
-    &__label {
-        /* @include label */
+        @include sectionTitle;
     }
 
     &__subTitle {
-        /* @include bioBlock; */
+        @include subTitle;
     }
 
-    &__skills {
-        /* display: flex;
-        flex-direction: column */
+    &__collections {
+        display: flex;
+        flex-direction: column;
+        padding: 0 $p-3;
+
+        &__title {
+            text-align: left;
+           margin-bottom: $m-3; 
+        }
     }
-    &__group-title {
-        /* margin-bottom: 20px; */
-    }
-    &__group {
-        /* display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between; */
+    &__collection {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       padding: 0 $p-3;
     }
 
     &__skill {
-        /* min-width: 150px;
+        min-width: 150px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px; */
+        margin-bottom: 20px;
     }
 
     &__nm {
@@ -50,45 +62,55 @@
     }
 
     &__image {
-        /* width: 40px;
-        height: 40px;
-        margin-bottom: 15px */
+        width: 20px;
+        height: 20px;
+        margin-bottom: 15px
     }
 
 
-    /* &__r {
-        @include rightBlock;
+    &__r {
+        display: flex;
+        flex-direction: column; 
+        padding: $p-3;
+        margin-bottom: $m-4;
 
-        &__title{
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+        &__title {
+            margin-bottom: $m-3;
         }
-    } */
+    }
 
     &__details {
         display: flex;
-
+        align-items: center;
+        justify-content: space-between;
     }
 
     &__detail {
         display: flex;
         align-items: center;
         border-top: 1px solid #000;
-        padding: 20px 10px;
+        padding: $p-2;
         width: 100%;
     }
     &__date {
         margin-right: 30px;
-        font-size: .7rem;
+
+        &-from {
+            /* color: $yellow; */
+        }
+
+        &-to {
+
+        }
     }
 
     &__desc {
-        font-size: 1rem;
         width: 60%;
 
         &__company {
-            font-size: .7rem;
             padding-top: 12px;
+            color: $blue;
+            font-weight: 600;
         }
     }
 }
