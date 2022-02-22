@@ -1,8 +1,8 @@
 @mixin mainSection {
     position: relative;
+    height: 100vh;
 }
 @mixin mainBlock {
-    height: calc(100vh - #{$header-height});
     display: flex;
     align-items: center;
     justify-content: center;

@@ -3,8 +3,7 @@
 
 .about {
     @include mainSection;
-
-
+    height: calc(100vh - #{$header-height});
     &__infos {
         @include mainBlock;
         @include breakpoint(md) {

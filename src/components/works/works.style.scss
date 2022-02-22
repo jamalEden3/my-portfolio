@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
+.works {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    background-color: $yellow;
+
+    &__slider {
+        display: flex;
+        /* position: absolute;
+        left: 0; */
+        margin-bottom: $m-4;   
+    }
+
+     &__container {
+        width: 100vw;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in;
+        padding: $p-3;
+    }
+
+    &__items {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        overflow: hidden;
+        padding: $p-4;
+        border: 2px dashed rgb(0, 5, 70);
+        flex-direction: column-reverse;
+    }
+
+    &__left {
+        flex: 4;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+
+    &__right {
+        flex: 8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__leftContainer {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    &__imgBox {
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    &__image {
+        border-radius: 20px;
+    }
+
+    &__arrows{
+        display: flex;
+        justify-content: space-between;
+        padding: $p-3;
+        border: 1px solid #000;
+        width: 100%;
+    }
+
+    &__leftArrow {
+       width: 50px;
+    }
+
+    &__rightArrow {
+       width: 50px;
+    }
+    
+}
+

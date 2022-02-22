@@ -4,6 +4,8 @@
     @include mainSection;
     padding-top: $p-4;
     background-color: #fff;
+    height: 100vh;
+    overflow: hidden;
 
     &__group {
         @include mainBlock;

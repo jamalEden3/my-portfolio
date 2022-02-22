@@ -4,7 +4,7 @@
 .services {
     @include mainSection;
     background-color: $yellow;
-    margin-bottom: $m-4;
+    height: 100vh;
 
     &__group {
         @include mainBlock;
