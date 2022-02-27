@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $m-3;
+    position: relative;
+    width: 100%;
+    &__field {
+        padding: 5px;
+        margin: $m-1 0;
+        width: 200px;
+        border-bottom: 2px dashed #000;
+        border-left: 3px dashed #000;
+        outline: none;
+        margin-bottom: $m-2;
+
+        &::placeholder {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        &:invalid[focused= "true"]  ~ span {
+            display: block;
+        }
+    }
+
+    &__label {
+        font-size: 1.5rem;
+    }
+
+    &__errorMsg {
+        font-size: 1.3rem;
+        color: $warn;
+        display: none;
+    }
+}
+
+/* .input:invalid ~ span {
+    display: block;
+} */
+
+/* .input__field:invalid ~ span {
+    display: block;
+} */
