@@ -8,7 +8,7 @@ import { DiYii } from "react-icons/di";
 function Header() {
     
     return (
-        <header className="header">
+        <header className="header flex">
             <div className="header__logo">
                 <Link to="/" className="header__logo__link">
                     Jamal

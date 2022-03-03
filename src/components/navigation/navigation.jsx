@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './navigation.style.scss';
 
 import { Link } from 'react-router-dom';
 
@@ -41,28 +40,28 @@ function Navigation() {
     return (
         <>
             <nav className={`nav ${openMenu && size.width < 768 ? 'nav__isMenu': ''}`}>
-                <ul className="nav__list">
-                    <li className="nav__list__item">
-                        <Link to="/" className="nav__list__link" onClick={menuToggle}>About</Link>
+                <ul className="nav__list flex">
+                    <li>
+                        <Link to="/" onClick={menuToggle}>About</Link>
                     </li>
-                    <li className="nav__list__item">
-                        <Link to="/services" className="nav__list__link" onClick={menuToggle}>Service</Link>
+                    <li>
+                        <Link to="/services" onClick={menuToggle}>Service</Link>
                     </li>
-                    <li className="nav__list__item">
-                        <Link to="/portfolio" className="nav__list__link" onClick={menuToggle}>Portfolio</Link>
+                    <li>
+                        <Link to="/portfolio" onClick={menuToggle}>Portfolio</Link>
                     </li>
-                    <li className="nav__list__item">
-                        <Link to="/Testimonials" className="nav__list__link" onClick={menuToggle}>Testimonial</Link>
+                    <li>
+                        <Link to="/Testimonials" onClick={menuToggle}>Testimonial</Link>
                     </li>
                 </ul>
-            </nav>
-            <div className="nav__toggle">
-                {!openMenu ? 
-                    <BiMenuAltRight onClick={menuToggle}/> 
-                    : 
-                    <AiOutlineClose onClick={menuToggle}/>}
+                <div className="nav__toggle">
+                    {!openMenu ? 
+                    <   BiMenuAltRight onClick={menuToggle}/> 
+                        : 
+                        <AiOutlineClose onClick={menuToggle}/>}
                 
-            </div>  
+                </div>
+            </nav>
         </>
     )
 }
