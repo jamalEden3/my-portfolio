@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './navigation.style.scss';
 
 import { Link } from 'react-router-dom';
 
@@ -39,8 +40,8 @@ function Navigation() {
     console.log(window.innerWidth)
     return (
         <>
-            <nav className={`nav ${openMenu && size.width < 768 ? 'nav__isMenu': ''}`}>
-                <ul className="nav__list flex">
+            <nav className={`nav fs-300 flex ${openMenu && size.width < 768 ? 'nav__isMenu': ''}`}>
+                <ul className="nav__list flex fs-300" role="list" style={{['--gap']: '2rem'}}>
                     <li>
                         <Link to="/" onClick={menuToggle}>About</Link>
                     </li>
@@ -54,14 +55,16 @@ function Navigation() {
                         <Link to="/Testimonials" onClick={menuToggle}>Testimonial</Link>
                     </li>
                 </ul>
-                <div className="nav__toggle">
-                    {!openMenu ? 
-                    <   BiMenuAltRight onClick={menuToggle}/> 
-                        : 
-                        <AiOutlineClose onClick={menuToggle}/>}
-                
-                </div>
             </nav>
+            <div className="nav__toggle">
+                    {
+                    !openMenu ? 
+                        <BiMenuAltRight onClick={menuToggle}/>
+                        : 
+                        <AiOutlineClose onClick={menuToggle}/> 
+                    }
+                    
+            </div>
         </>
     )
 }

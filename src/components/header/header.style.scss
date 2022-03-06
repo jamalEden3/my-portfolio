@@ -1,7 +1,12 @@
 @import "../../styles/variables.scss";
 
 .header {
-    border: 1px solid #000;
-    place-items: center;
-    justify-content: ;
+    height: 50px;
+    width: 100vw;
+    z-index: 100;
+    position: relative;
+    transition: ease-in-out .5s;
+
+    &__logo {
+    }
 }

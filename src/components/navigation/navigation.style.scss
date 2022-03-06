@@ -1,66 +1,46 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+
 .nav {
-    
-       /*  &__isMenu {
-            transform: translate(100%);
-        }
+    position: fixed;
+    right: 100%;
+    bottom: 0;
+    width: 100vw;
+    min-height: calc(100vh - 50px);
+    transform: translate(0);
+    transition: 0.3s ease transform;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    background-color: var(--clr-light-dark);
+
+    @include breakpoint(md) {
+        transform: none;
+        flex-direction: row;
+        width: auto;
+        height: 50px;
+        position: static;
+        background-color: transparent;
+    }
+
+    &__isMenu {
+        transform: translate(80%);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
 
         @include breakpoint(md) {
-            transform: none;
             flex-direction: row;
-            background: transparent;
-            width: auto;
-            height: $header-height;
-            position: static;
         }
+    }
 
-        &__list {
-            display: flex;
-            flex-direction: column;
-            padding: $p-1;
-
-            @include breakpoint(md) {
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 0;
-                margin-right: calc(0.5rem + #{$p-1});
-            }
-
-            &__item {
-                padding: $p-1 $p-2;
-                font-size: 2rem;
-                font-weight: 600;
-            }
-            &__item:not(:last-child) {
-                margin-bottom: $m-2;
-                @include breakpoint(md) {
-                    margin-bottom: 0;
-                    margin-right: $m-2;
-                }
-            }
-
-            &__link {
-                color: $yellow;
-                @include breakpoint(md) {
-                    color: #000;
-                }
-            }
+    &__toggle {
+        cursor: pointer;
+        @include breakpoint(md) {
+            display: none;
         }
-
-        &__toggle {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            font-size: 2rem;
-            transition: 0.3s ease all;
-            position: relative;
-            
-            &:hover {
-                color: $yellow;
-            }
-            @include breakpoint(md) {
-                display: none;
-            }
-        } */
+    }
 }

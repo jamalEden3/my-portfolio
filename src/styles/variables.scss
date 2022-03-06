@@ -8,6 +8,7 @@
     --clr-primary: hsla(46, 96%, 70%, 1);
     --clr-buttons: hsla(250, 100%, 67%, 1);
     --clr-dark: hsla(0, 0%, 0%, 1);
+    --clr-light-dark: rgb(116, 116, 116);
     --clr-white: hsla(0, 0%, 100%, 1);
     --clr-light: rgb(251, 255, 212);
     
@@ -18,7 +19,7 @@
     --fs-700: 3.5rem;
     --fs-600: 2rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.125rem;
+    --fs-400: 1.325rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
 
@@ -49,8 +50,20 @@ p,
 figure,
 picture {
     margin: 0;
+    padding: 0;
 }
 
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-dark);
+    cursor: pointer;
+  }
+  
 /* setup the  body */
 
 body {
@@ -76,6 +89,8 @@ select,
 button {
     font: inherit;
 }
+
+
 
 /* remove animation for people who've turned them off  */
 @media (prefers-reduced-motion: reduce) {
@@ -108,7 +123,7 @@ button {
 .container {
     max-width: 80rem;
     padding-inline: 2rem;
-    margin-inline: auto;
+    margin: 0 auto;
 }
 
 .sr-only {
@@ -126,6 +141,10 @@ button {
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
     outline: 1px solid blue;
+}
+
+.fixed {
+    position: fixed;
 }
 
 /* colors */

@@ -8,14 +8,16 @@ import { DiYii } from "react-icons/di";
 function Header() {
     
     return (
-        <header className="header flex">
-            <div className="header__logo">
-                <Link to="/" className="header__logo__link">
-                    Jamal
-                    <DiYii className="header__logo__icon" />
-                </Link>
+        <header className="header">
+            <div className="container flex" style={{justifyContent: 'space-between', alignItems: 'center'}}>
+                <div className="header__logo ff-serif fs-400">
+                    <Link to="/" className="header__logo__link">
+                        Jamal
+                        <DiYii className="header__logo__icon" />
+                    </Link>
+                </div>
+                <Navigation/>
             </div>
-            <Navigation />
         </header>
     )
 }
